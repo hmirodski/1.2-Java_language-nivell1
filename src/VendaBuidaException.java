@@ -1,5 +1,5 @@
 public class VendaBuidaException extends Exception {
-    public VendaBuidaException(String msg) {
-        super(msg);
+    public VendaBuidaException() {
+        super("Per fer una venda primer has d'afegir productes");
     }
 }

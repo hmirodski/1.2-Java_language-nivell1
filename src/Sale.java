@@ -1,14 +1,28 @@
+import java.util.ArrayList;
+
 public class Sale {
 
-    private Product[] products;
-    private int totalPrice;
+    private ArrayList<Product> products;
 
 
-    static void calculateTotalPrice(Product[] products) throws VendaBuidaException {
-        if (products.length == 0) {
-            throw new VendaBuidaException("Per fer una venda primer has d'afegir productes");
+
+    static int calculateTotalPrice(ArrayList<Product> products) throws VendaBuidaException {
+        int total = 0;
+
+        if(products.isEmpty()){
+            throw new VendaBuidaException();
         }
 
+        for(Product product : products) {
+            total += product.getPrice();
+            System.out.println(product.getName());
+        }
+
+        System.out.println(total);
+
+        return total;
     }
+
+
 
 }
