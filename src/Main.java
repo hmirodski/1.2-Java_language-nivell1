@@ -16,8 +16,13 @@ public class Main {
 
             Sale.calculateTotalPrice(productCollection);
 
+            Product p = productCollection.get(10);
+
         } catch (VendaBuidaException e) {
             throw new RuntimeException(e.getMessage());
         }
+
+
+
     }
 }
