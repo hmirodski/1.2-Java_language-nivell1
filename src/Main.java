@@ -14,9 +14,8 @@ public class Main {
             productCollection.add(product2);
             productCollection.add(product3);
 
-            Sale.calculateTotalPrice(productCollection);
-
-
+            Sale sale1 = new Sale();
+            System.out.println(sale1.calculateTotalPrice(productCollection));
 
         } catch (VendaBuidaException e) {
             throw new RuntimeException(e.getMessage());
@@ -27,6 +26,7 @@ public class Main {
         try{
             ArrayList<Product> productCollection2 = new ArrayList<>();
             Product product5 = new Product("cambur",10);
+            productCollection2.add(product5);
 
             Product p = productCollection2.get(10);
 
