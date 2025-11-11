@@ -16,10 +16,22 @@ public class Main {
 
             Sale.calculateTotalPrice(productCollection);
 
-            Product p = productCollection.get(10);
+
 
         } catch (VendaBuidaException e) {
             throw new RuntimeException(e.getMessage());
+
+        }
+
+
+        try{
+            ArrayList<Product> productCollection2 = new ArrayList<>();
+            Product product5 = new Product("cambur",10);
+
+            Product p = productCollection2.get(10);
+
+        } catch (IndexOutOfBoundsException e) {
+            throw new IndexOutOfBoundsException(e.getMessage());
         }
 
 

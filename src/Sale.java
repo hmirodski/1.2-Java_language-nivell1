@@ -9,11 +9,11 @@ public class Sale {
     static int calculateTotalPrice(ArrayList<Product> products) throws VendaBuidaException {
         int total = 0;
 
-        if(products.isEmpty()){
+        if (products.isEmpty()){
             throw new VendaBuidaException();
         }
 
-        for(Product product : products) {
+        for (Product product : products) {
             total += product.getPrice();
             System.out.println(product.getName());
         }
