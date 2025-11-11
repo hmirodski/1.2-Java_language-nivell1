@@ -1,6 +1,12 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Sale {
+
+    List<Product> products;
+    private int totalPrice;
+
+
 
     protected int calculateTotalPrice(ArrayList<Product> products) throws VendaBuidaException {
         int total = 0;
