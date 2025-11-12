@@ -3,8 +3,17 @@ import java.util.List;
 
 public class Sale {
 
-    List<Product> products;
+    private List<Product> products;
     private int totalPrice;
+
+    public Sale() {
+        this.products = new ArrayList<>();
+        this.totalPrice = 0;
+    }
+
+    public void addProduct(Product product) {
+        this.products.add(product);
+    }
 
 
 
