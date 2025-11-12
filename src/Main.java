@@ -1,40 +1,36 @@
-import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
 
         try {
 
-            ArrayList<Product> productCollection = new ArrayList<>();
-            Product product1 = new Product("mango",10);
-            Product product2 = new Product("lime",15);
-            Product product3 = new Product("pineapple",15);
+            Sale venta1 = new Sale();
+            venta1.addProduct(new Product("Mango", 10));
+            venta1.addProduct(new Product("Lechosa", 25));
+            venta1.addProduct(new Product("Cambur", 30));
+            venta1.calculateTotalPrice();
 
-            productCollection.add(product1);
-            productCollection.add(product2);
-            productCollection.add(product3);
+            int total = venta1.getTotalPrice();
+            System.out.println(total);
 
-            Sale sale1 = new Sale();
-            System.out.println(sale1.calculateTotalPrice(productCollection));
 
         } catch (VendaBuidaException e) {
-            throw new RuntimeException(e.getMessage());
+            System.out.println(e.getMessage());
 
         }
 
 
-        try{
-            ArrayList<Product> productCollection2 = new ArrayList<>();
-            Product product5 = new Product("cambur",10);
-            productCollection2.add(product5);
+        try {
+            Sale venta2 = new Sale();
+            venta2.addProduct(new Product("Avocado", 10));
+            System.out.println(venta2.getProducts());
 
-            Product p = productCollection2.get(10);
+            venta2.getProducts().get(10);
+
 
         } catch (IndexOutOfBoundsException e) {
-            throw new IndexOutOfBoundsException(e.getMessage());
+            System.out.println(e.getMessage());
         }
-
-
 
     }
 }

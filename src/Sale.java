@@ -1,21 +1,42 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Sale {
 
-    protected int calculateTotalPrice(ArrayList<Product> products) throws VendaBuidaException {
-        int total = 0;
+    private List<Product> products;
+    private int totalPrice;
 
-        if (products.isEmpty()){
+    public Sale() {
+        this.products = new ArrayList<>();
+        this.totalPrice = 0;
+    }
+
+    public void addProduct(Product product) {
+        this.products.add(product);
+    }
+
+
+    public int calculateTotalPrice() throws VendaBuidaException {
+
+        if (this.products.isEmpty()) {
             throw new VendaBuidaException();
         }
 
-        for (Product product : products) {
-            total += product.getPrice();
+        this.totalPrice = 0;
+        for (Product product : this.products) {
+            this.totalPrice += product.getPrice();
         }
 
-        return total;
+        return this.totalPrice;
     }
 
+    public int getTotalPrice() {
+        return this.totalPrice;
+    }
+
+    public List<Product> getProducts() {
+        return this.products;
+    }
 
 
 }
