@@ -16,21 +16,23 @@ public class Sale {
     }
 
 
+    public int calculateTotalPrice() throws VendaBuidaException {
 
-    protected int calculateTotalPrice() throws VendaBuidaException {
-
-        if (this.products.isEmpty()){
+        if (this.products.isEmpty()) {
             throw new VendaBuidaException();
         }
 
         this.totalPrice = 0;
-        for (Product product : products) {
-            total += product.getPrice();
+        for (Product product : this.products) {
+            this.totalPrice += product.getPrice();
         }
 
-        return total;
+        return this.totalPrice;
     }
 
+    public int getTotalPrice() {
+        return this.totalPrice;
+    }
 
 
 }
