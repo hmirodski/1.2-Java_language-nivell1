@@ -5,14 +5,13 @@
 ### Enunciado
 
 **Ejercicio 1:**
+Crea una classe anomenada "Producte" amb els atributs nom i preu, i una altra classe anomenada "Venda". Aquesta classe té com a atributs una col·lecció de productes i el preu total de la venda.
 
-Crea una clase denominada "Producte" con los atributos nombre y precio, y otra clase denominada "Venda". Esta clase tiene como atributos una colección de productos y el precio total de la venta.
+La classe "Venda", té un mètode anomenat calcularTotal() que llança l’excepció personalitzada "VendaBuidaException" i mostra per pantalla “Per fer una venda primer has d’afegir productes” si la col·lecció de productes està buida. Si la col·lecció té productes, llavors ha de recórrer la col·lecció i guardar la suma de tots els preus dels productes a l’atribut preu total de la venda.
 
-La clase "Venda" tiene un método denominado `calcularTotal()` que lanza la excepción personalizada "VendaBuidaException" y muestra por pantalla "Per fer una venda primer has d'afegir productes" si la colección de productos está vacía. Si la colección tiene productos, entonces debe recorrer la colección y guardar la suma de todos los precios de los productos en el atributo precio total de la venta.
+L’excepció personalitzada "VendaBuidaException" ha de ser filla de la classe Exception. Al seu constructor li hem de passar el missatge “Per fer una venda primer has d’afegir productes” i quan capturem l’excepció, l’hem de mostrar per pantalla amb el mètode getMessage() de l’excepció.
 
-La excepción personalizada "VendaBuidaException" debe ser hija de la clase Exception. En su constructor se le debe pasar el mensaje "Per fer una venda primer has d'afegir productes" y cuando capturemos la excepción, debemos mostrarla por pantalla con el método `getMessage()` de la excepción.
-
-Escribe el código necesario para generar y capturar una excepción de tipo "IndexOutOfBoundsException".
+Escriu el codi necessari per a generar i capturar una excepció de tipus "IndexOutOfBoundsException".
 
 ---
 
