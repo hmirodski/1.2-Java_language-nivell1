@@ -17,13 +17,13 @@ public class Sale {
 
 
 
-    protected int calculateTotalPrice(ArrayList<Product> products) throws VendaBuidaException {
-        int total = 0;
+    protected int calculateTotalPrice() throws VendaBuidaException {
 
-        if (products.isEmpty()){
+        if (this.products.isEmpty()){
             throw new VendaBuidaException();
         }
 
+        this.totalPrice = 0;
         for (Product product : products) {
             total += product.getPrice();
         }
