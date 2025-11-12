@@ -30,7 +30,7 @@ Escriu el codi necessari per a generar i capturar una excepció de tipus "IndexO
 
 Para ejecutar este proyecto necesitas:
 
-- **Java Development Kit (JDK)**: Versión 8 o superior (recomendado JDK 17)
+- **Java Development Kit (JDK)**: JDK 17
 - **IDE recomendado**: IntelliJ IDEA, Eclipse, NetBeans o Visual Studio Code con extensión de Java
 - **Sistema operativo**: Windows, macOS o Linux
 - **Git**: Para clonar el repositorio
