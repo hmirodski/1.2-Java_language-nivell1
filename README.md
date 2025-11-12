@@ -4,10 +4,6 @@
 
 ### Enunciado
 
-**Ejercicio 1:**
-**Descripción - Enunciado del ejercicio**
-Este ejercicio consiste en desarrollar un sistema de gestión de ventas en Java con el objetivo de practicar el manejo de excepciones personalizadas y estándar.
-**Nivell 1**
 - Exercici 1
 Crea una classe anomenada "Producte" amb els atributs nom i preu, i una altra classe anomenada "Venda". Aquesta classe té com a atributs una col·lecció de productes i el preu total de la venda.
 
