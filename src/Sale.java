@@ -34,5 +34,9 @@ public class Sale {
         return this.totalPrice;
     }
 
+    public List<Product> getProducts() {
+        return this.products;
+    }
+
 
 }

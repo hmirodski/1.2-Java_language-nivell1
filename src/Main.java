@@ -22,17 +22,16 @@ public class Main {
 
 
         try{
-            ArrayList<Product> productCollection2 = new ArrayList<>();
-            Product product5 = new Product("cambur",10);
-            productCollection2.add(product5);
+            Sale venta2 = new Sale();
+            venta2.addProduct(new Product("Avocado", 10));
+            System.out.println(venta2.getProducts());
 
-            Product p = productCollection2.get(10);
+            venta2.getProducts().get(10);
+
 
         } catch (IndexOutOfBoundsException e) {
-            throw new IndexOutOfBoundsException(e.getMessage());
+            System.out.println(e.getMessage());
         }
-
-
 
     }
 }
